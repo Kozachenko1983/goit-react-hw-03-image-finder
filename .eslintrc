@@ -1,6 +1,7 @@
 {
   "extends": [
     "eslint:recommended",
+    "react-app",
     "airbnb",
     "plugin:import/errors",
     "plugin:react/recommended",
@@ -25,6 +26,7 @@
     "jest": true
   },
   "rules": {
+    "react/static-property-placement": 0,
     "no-console": 1,
     "linebreak-style": ["error", "unix"],
     "react/jsx-filename-extension": [1, {
@@ -39,6 +41,20 @@
       "always",
       {
         "ignoreClassFields": true
+      }
+    ],
+    "react/state-in-constructor": [0, "never"],
+    "react/sort-comp": [
+      2,
+      {
+        "order": [
+          "static-methods",
+          "static-variables",
+          "instance-variables",
+          "lifecycle",
+          "everything-else",
+          "render"
+        ]
       }
     ]
   },
